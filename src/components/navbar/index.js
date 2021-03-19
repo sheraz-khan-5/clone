@@ -8,15 +8,15 @@ import {Nav,
         NavBtnLinkS
         } from './NavbarElements'
 
-function Navbar() {
+function Navbar({toggle,isOpen}) {
     return (
     <>
-    <Nav>
-        <NavbarContainer>
+    <Nav isOpen={isOpen}  >
+        <NavbarContainer  >
             <NavLogo to='/'>
                 logo
             </NavLogo>
-            <MobileBar>
+            <MobileBar   onClick={toggle} >
                 <FaBars />
             </MobileBar>
               <NavMenu>

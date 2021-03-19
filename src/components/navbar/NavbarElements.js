@@ -14,10 +14,12 @@ position:sticky;
 top:0;
 /* opacity:0.1; */
 border-bottom:solid red 0.8px;
-
 @media screen and (max-width:960px){
 transition:0.8s all ease;
 }
+/* @media screen and (max-width:960px){
+opacity:0;
+} */
 `
 export const NavbarContainer=styled.div`
 display:flex;
@@ -34,10 +36,13 @@ color:#fff;
 display:flex;
 justify-self:flex-end;
 cursor: pointer;
+position:sticky;
+top:0;
 font-size:1.5rem;
-margin-left:24px;
+margin-left:50px;
 font-weight:bold;
 text-decoration:none;
+transform:translate(-300% 0%)
 `
 export const MobileBar=styled.div`
 display:none;
@@ -50,7 +55,8 @@ display:none;
     top:0;
     font-size:1.25rem;
     cursor: pointer;
-    transform:translate(-100%,60%)
+    transform:translate(-300%,90%)
+    
 }
 
 `
