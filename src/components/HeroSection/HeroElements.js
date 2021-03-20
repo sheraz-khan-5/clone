@@ -7,7 +7,7 @@ justify-content:center;
 height:645px;
 align-items:center;
 position: relative;
-padding:0 30px;
+/* padding:0 30px; */
 z-index:1;
 overflow:hidden;
 /* margin-top:-60px; */

@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import GTDSection from '../components/GTD'
 import HeroSection from '../components/HeroSection'
 import Navbar from '../components/navbar'
 import Sidebar from '../components/Sidebar'
@@ -14,6 +15,7 @@ const Home = () => {
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <Navbar  toggle={toggle}  />
                  <HeroSection />
+                 <GTDSection />
            
            
             
