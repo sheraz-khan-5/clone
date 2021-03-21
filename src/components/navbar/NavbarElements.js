@@ -3,7 +3,7 @@ import {Link as LinkR} from 'react-router-dom'
 import {Link as LinkS} from 'react-scroll'
 
 export const Nav =styled.nav`
-
+background:${({scrollNav})=>(scrollNav ? 'white': 'tranparent')};
 height:60px;
 margin-top:-80px;
 display:flex;
@@ -13,13 +13,17 @@ font-size:0.8rem;
 position:sticky;
 top:0;
 z-index:10;
-border-bottom:solid red 0.8px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-bottom:1px solid #fff;
+transition: all 0.7s ease 0s;
 @media screen and (max-width:960px){
 transition:0.8s all ease;
 }
-/* @media screen and (max-width:960px){
-opacity:0;
-} */
+@media screen and (max-width:1124px){
+    transition:0.8s all ease;
+    background:#fff;
+}
+
 `
 export const NavbarContainer=styled.div`
 display:flex;
@@ -30,9 +34,10 @@ z-index:1;
 width:100%;
 padding:0 24px;
 max-width:1100px;
+
 `
 export const NavLogo=styled(LinkR)`
-color:#fff;
+color:black;
 display:flex;
 justify-self:flex-end;
 cursor: pointer;
@@ -42,22 +47,24 @@ font-size:1.5rem;
 margin-left:50px;
 font-weight:bold;
 text-decoration:none;
-transform:translate(-300% 0%)
+transform:translate(-300% 0%);
 `
 export const MobileBar=styled.div`
 display:none;
 
-@media screen and (max-width:1124px){
+@media screen and (max-width:1080px){
     display:block;
-    color:#fff;
+    color:black;
     position:absolute;
     right:0;
     top:0;
     font-size:1.25rem;
     cursor: pointer;
-    transform:translate(-300%,90%)
+    transform:translate(-300%,90%);
+
     
 }
+
 
 `
 export const NavMenu=styled.ul`
@@ -65,6 +72,7 @@ display:flex;
 align-items:center;
 list-style:none;
 text-align:center;
+color:${({scrollNav})=>(scrollNav ? 'black': 'white')};
 
 @media screen and (max-width:1124px){
     display:none;
@@ -73,10 +81,12 @@ text-align:center;
 `
 export const NavItem = styled.li`
 height:60px;
+
 `
 
 export const NavLinkS = styled(LinkS)`
-color:#fff;
+
+
 display:flex;
 align-items:center;
 padding:0 1rem;
@@ -85,6 +95,7 @@ height:100%;
 cursor:pointer;
 font-weight: 100;
 letter-spacing: 1;
+
 
 &.active{
     color:#3ac280; 

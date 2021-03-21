@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Link as LinkS} from 'react-router-dom'
+import {Link as LinkS} from 'react-scroll'
 
 export const HeroContainer = styled.div`
 display:flex;
