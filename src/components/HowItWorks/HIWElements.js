@@ -75,7 +75,7 @@ border:1px solid;
 `
 export const HIWH2 = styled.h1`
 
-      background-repeat: no-repeat;
+    background-repeat: no-repeat;
     text-align: left;
     background-position: bottom;
     font-weight: 700;
