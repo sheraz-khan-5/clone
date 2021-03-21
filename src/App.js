@@ -1,11 +1,17 @@
 import React from 'react'
 import './App.css'
-import {BrowserRouter as Router} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Home from './pages'
+import SignInPage from './pages/signin'
+import Navbar from './components/navbar'
 function App() {
     return (
         <Router>
-            <Home />
+         
+            <Switch>
+                <Route path="/" component={Home} exact />
+                <Route path="/signin" component={SignInPage} exact/>
+            </Switch>
         </Router>
     )
 }

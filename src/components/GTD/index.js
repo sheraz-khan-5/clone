@@ -1,11 +1,38 @@
 //Ground Truth Data Section Style
 import React from 'react'
-import {GTDContainer,GTDWrapper,GTDRow1,LeftColumn,TitleText,RightColumn,ParaText,Title,Para,BgCircle} from './GTD-Elements'
+import Arrow from '../../images/arrow.png'
+import Post from '../../images/post.jpg'
+import Pre from '../../images/pre.jpg'
+import {
+    GTDContainer,
+    GTDWrapper,
+    GTDRow1,
+    LeftColumn,
+    TitleText,
+    RightColumn,
+    ParaText,
+    Title,
+    Para,
+    BgCircle,
+    GTDRow2,
+    PictureContainer,
+    Picture1,
+    Picture2,
+    SliderBarContainer,
+    SlideBar,
+    SliderArrowContainer,
+    ArrowImage,
+    BtnWrapper,
+    BtnRoute
+
+
+
+} from './GTD-Elements'
 
 const GTDSection = () => {
     return (
         <>
-        <GTDContainer>
+        <GTDContainer id={'ground-truth-data'}>
         <GTDWrapper>
             <GTDRow1>
             <BgCircle></BgCircle>
@@ -20,11 +47,27 @@ const GTDSection = () => {
                 </ParaText>
                 </RightColumn>
             </GTDRow1>
-            <GTDRow1>
-           
-            </GTDRow1>
+            <GTDRow2>
+           <PictureContainer>
+            <Picture1 src={Pre}/>
+            <Picture2 src={Post} />
+            <SliderBarContainer>
+                <SlideBar>
+                </SlideBar>
+                <SliderArrowContainer>
+                    <ArrowImage src={Arrow} />
+                </SliderArrowContainer>
+            </SliderBarContainer>
+           </PictureContainer>
+               <BtnWrapper>
+                      <BtnRoute to='/signup'>Try It</BtnRoute>
+                </BtnWrapper> 
+            </GTDRow2>
+
         </GTDWrapper>
+        
         </GTDContainer>
+              
             
         </>
     )

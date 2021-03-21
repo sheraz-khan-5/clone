@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import GTDSection from '../components/GTD'
 import HeroSection from '../components/HeroSection'
+import HowItWorks from '../components/HowItWorks'
 import Navbar from '../components/navbar'
 import Sidebar from '../components/Sidebar'
 
@@ -13,9 +14,10 @@ const Home = () => {
     return (
         <>
             <Sidebar isOpen={isOpen} toggle={toggle}/>
-            <Navbar  toggle={toggle}  />
+            <Navbar   toggle={toggle} />
                  <HeroSection />
                  <GTDSection />
+                 <HowItWorks /> 
            
            
             

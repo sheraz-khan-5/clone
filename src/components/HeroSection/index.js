@@ -17,7 +17,13 @@ const HeroSection = () => {
                       Estimating Engine
                       </HeroP>
                   <HeroScroll>
-                      <HeroLink to="ground-truth-data"><span>|</span></HeroLink>
+                      <HeroLink to='ground-truth-data' 
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}
+                        activeClass='active'>|</HeroLink>
                   </HeroScroll>
               </HeroContent>
           </HeroContainer>  
