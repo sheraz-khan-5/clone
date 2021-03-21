@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import FeeStructure from '../components/FeeStructure'
 import GTDSection from '../components/GTD'
 import HeroSection from '../components/HeroSection'
 import HowItWorks from '../components/HowItWorks'
@@ -18,6 +19,7 @@ const Home = () => {
                  <HeroSection />
                  <GTDSection />
                  <HowItWorks /> 
+                 <FeeStructure />
            
            
             
