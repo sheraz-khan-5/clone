@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import ExampleDeliverables from '../components/ExampleDeliverables.js'
 import FeeStructure from '../components/FeeStructure'
 import GTDSection from '../components/GTD'
 import HeroSection from '../components/HeroSection'
@@ -20,6 +21,7 @@ const Home = () => {
                  <GTDSection />
                  <HowItWorks /> 
                  <FeeStructure />
+                 <ExampleDeliverables />
            
            
             
