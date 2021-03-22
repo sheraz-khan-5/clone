@@ -12,7 +12,7 @@ border:solid 1px;
 
 
 @media screen and (max-width:768px){
-    height:1050px;
+    max-height:1050px;
     border:solid 1px;
 }
 @media screen and (min-width:768px) and (max-width:920px){
