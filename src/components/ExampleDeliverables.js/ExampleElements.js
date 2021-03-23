@@ -23,7 +23,7 @@ export const EDContainer = styled.div`
     padding:20px 10px;
 `
 export const H2Text = styled.h2`
-    background-size: 200px 200px;
+    background-size: 300px 200px;
     background-repeat: no-repeat;
     background-position-x:center;
     background-position-y:center;
@@ -61,7 +61,7 @@ export const LoadSection = styled.div`
 `
 export const LoadWrapper=styled.div`
     height:480px;  
-    width:90%;
+    width:85%;
     margin:0 auto;
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -92,10 +92,10 @@ export const Fade= styled.div`
     flex-direction:column;
     justify-content:center;   
     transition: opacity .5s;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.4);
 `
 export const PlayIcon = styled.i`
-    font-size:48px ;
+    font-size:120px ;
     color:#fff;
     padding:50px 0;
 `
@@ -117,7 +117,7 @@ export const LoadLabel = styled.p`
     text-shadow: 0 0 40px rgb(0 0 0 / 20%);
 `
     export const LogoImage = styled.img`
-    width: 150px;
+    width: 130px;
     height: 50px;
     `
     //MPartial Image Slider Section
@@ -175,7 +175,7 @@ export const LoadLabel = styled.p`
      
 //     `
 
-//True Plan Section
+            //----------------------True Plan Section--------------
 
          export const TruePlanContainer = styled.div`
              max-width:100%;
@@ -185,7 +185,6 @@ export const LoadLabel = styled.p`
 `
         export const H3Title = styled.h3`
             color: #000!important;
-            border:solid 1px;
             text-align:center;
         `
         export const SketchContainer = styled.div`

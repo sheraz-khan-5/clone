@@ -77,7 +77,7 @@ const ExampleDeliverables = () => {
                         <LoadingContent>
                             <Fade>
                                 <LoadingTitle >mpartial-Pre-Migration</LoadingTitle>
-                                <PlayIcon><AiFillPlayCircle size="100px"/></PlayIcon>
+                                <PlayIcon><AiFillPlayCircle size="80px"/></PlayIcon>
                                 <LabelCon>
                                     <LoadLabel>Powered By</LoadLabel>
                                     <LogoImage src={image}></LogoImage>
@@ -87,7 +87,7 @@ const ExampleDeliverables = () => {
                         <LoadingContent>
                             <Fade>
                                 <LoadingTitle >mpartial-Post-Migration</LoadingTitle>
-                                <PlayIcon><AiFillPlayCircle size="100px"/></PlayIcon>
+                                <PlayIcon><AiFillPlayCircle size="80px"/></PlayIcon>
                                 <LabelCon>
                                     <LoadLabel>Powered By</LoadLabel>
                                     <LogoImage src={image}></LogoImage>

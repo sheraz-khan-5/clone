@@ -94,11 +94,7 @@ function Navbar({toggle,isOpen}) {
                         >Contact Us</NavLinkS>
                     </NavItem>
                     <NavBtnLinkS to='/signin'
-                    smooth={true}
-                    duration={1000}
-                    spy={true}
-                    exact='true'
-                    offset={-80}
+                    
                     >Sign In </NavBtnLinkS>
                 </NavMenu>
          

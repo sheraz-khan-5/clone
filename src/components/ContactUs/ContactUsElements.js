@@ -29,7 +29,7 @@ export const H2Text = styled.h2`
     }
 `
 export const FormSection = styled.form`
-border:1px solid;
+
 padding:0px 100px;
 @media screen and (max-width:768px){
     padding:0px 10px;
@@ -39,7 +39,7 @@ export const FormContainer = styled.div`
     display:grid;
     grid-template-columns:1fr 1fr;
     margin:0 auto;
-    border:1px solid;
+
     
 @media screen and (max-width:768px){
     grid-template-columns:1fr;
@@ -53,7 +53,6 @@ display:flex;
 flex-direction:column;
 flex: 0 0 50%;
 padding-top:20px;
-border:1px solid;
 `
 export const LabelText = styled.label`
   color: rgb(0, 0, 32);
@@ -73,6 +72,8 @@ export const LabelText = styled.label`
   font-size: 16px;
   color: rgb(0, 0, 32);
   outline: none;
+
+  
     `
     export const TextArea = styled.textarea`
     height:250px;
@@ -92,20 +93,20 @@ export const LabelText = styled.label`
     export const SubmitButton = styled.button`
     width: 159px;
     height: 40px;
-    border-radius:10px;
+    border-radius:20px;
+    border:none;
     text-align: center;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0;
     color: #fff;
     :disabled{ 
-        border-color: #a6a6a6!important;
+        /* border-color: #a6a6a6!important; */
     background: #a6a6a6!important;
     cursor: not-allowed;
     
        }
-       &:enabled{ 
-       
+       &:enabled{  
     background: #3ac280!important;
     cursor: pointer;
        }
