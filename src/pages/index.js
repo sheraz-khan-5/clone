@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import ContactUs from '../components/ContactUs/index.js'
 import ExampleDeliverables from '../components/ExampleDeliverables.js'
 import FeeStructure from '../components/FeeStructure'
+import Footer from '../components/Footer/index.js'
 import GTDSection from '../components/GTD'
 import HeroSection from '../components/HeroSection'
 import HowItWorks from '../components/HowItWorks'
@@ -16,14 +17,15 @@ const Home = () => {
     }
     return (
         <>
-            <Sidebar isOpen={isOpen} toggle={toggle}/>
-            <Navbar   toggle={toggle} />
+                 <Sidebar isOpen={isOpen} toggle={toggle}/>
+                 <Navbar   toggle={toggle} />
                  <HeroSection />
                  <GTDSection />
                  <HowItWorks /> 
                  <FeeStructure />
                  <ExampleDeliverables />
                  <ContactUs />
+                 <Footer />
            
            
             

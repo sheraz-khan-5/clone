@@ -57,10 +57,7 @@ const ContactUs = () => {
         alert `Your Form is submitted :)`
     }
     return (
-         
-  
         <>
-          
           <ContactUsSection>
           <H2Text>Contact Us</H2Text>
           <FormSection onSubmit={handleSubmit}>
