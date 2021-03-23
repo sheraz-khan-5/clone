@@ -35,7 +35,6 @@ const GTDSection = () => {
         <GTDContainer id={'ground-truth-data'}>
         <GTDWrapper>
             <GTDRow1>
-            <BgCircle></BgCircle>
                 <LeftColumn>
                     <TitleText>
                     <Title>GROUND-TRUTH DATA EVERYONE TRUSTS</Title>
@@ -47,7 +46,7 @@ const GTDSection = () => {
                 </ParaText>
                 </RightColumn>
             </GTDRow1>
-            <GTDRow2>
+            {/* <GTDRow2>
            <PictureContainer>
             <Picture1 src={Pre}/>
             <Picture2 src={Post} />
@@ -62,7 +61,7 @@ const GTDSection = () => {
                <BtnWrapper>
                       <BtnRoute to='/signup'>Try It</BtnRoute>
                 </BtnWrapper> 
-            </GTDRow2>
+            </GTDRow2> */}
 
         </GTDWrapper>
         

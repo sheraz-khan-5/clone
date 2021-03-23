@@ -1,151 +1,154 @@
 //Ground Truth Data Section Style
 import styled from "styled-components"
 import {Link as LinkR} from "react-router-dom"
+import BGCircle from '../../images/BackgroundCircle.png'
+
 
 export const GTDContainer=styled.div`
-display:flex;
-justify-content:center;
-max-width:100%;
-max-height:1000px;
 padding-right: 40px;
 padding-left: 40px;
 margin-right: auto;
 margin-left: auto;
+background-color: #fff;
+padding:10px 100px;
 
 
 `
 export const GTDWrapper = styled.div`
-display:flex;
-flex-direction:column;
-/* justify-content:space-between; */
-max-width:100%;
-padding-top:20px;
-border:solid 1px ;
+background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-position-x:10px;
+    background-position-y:20px;
+    background-image:url(${BGCircle});
+max-width:98%;
+padding:90px 20px;
 @media screen and (max-width:768px){
-    padding:100px 0px;
+    background-size: 200px 200px;
+    background-position-x:50%;
+    background-position-y:20%;
+    padding:10px 0px;
 
+}
+@media screen and (min-width:768px) and (max-width:950px){
+    background-size: 200px 200px;
+    background-position-x:0;
+    background-position-y:0;
 }
 `
 export const GTDRow1 = styled.div `
+
 display:flex;
-justify-content:space-between;
-/* align-items:center; */
-max-height:800px;
-max-width :100%;
-position: relative;
-
-
-padding:90px 0px;
-@media screen and (max-width:768px) {
-    padding:0px 20px;
+justify-content:center;
+@media screen and (max-width:767px) {
+    /* padding:20px 10px; */
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    align-items:center;
+    
+   
   
 }
 `
 export const LeftColumn = styled.div `
-max-width:100%;
-max-height:550px;
-display:flex;
 
-/* justify-content:center; */
-/* border:solid 1px ; */
-padding-top:20px;
+padding:20px 100px;
+max-width:850px;
 @media screen and (min-width:201px) and (max-width:767px){
-    padding:20px 0px;
-    /* max-width:80%; */
-    max-height:400px;
-    max-width:400px;
+    padding:150px 0px;
     display:flex;
     justify-content:center;
     align-items:center;
-    position:sticky;
-
 }
 
 `
 export const RightColumn = styled.div `
-max-width:100%;
-max-height:600px;
+
 display:flex;
 justify-content:center;
 align-items:center;
 /* margin-bottom:20px; */
 `
-export const BgCircle = styled.div `
-width:200px;
-height:200px;
-border:solid blue 30px;
-border-radius:50%;
-opacity:0.1;
-position:absolute;
-top:-0%;
-left:-5%;
-
-@media screen and (min-width:201px) and (max-width:767px){
-position:absolute;
-top:-5%;
-left:20%;
-}
-
-`
 export const TitleText=styled.div `
-/* border:solid red 10px;
-border-radius:50%;
-z-index:1; */
-max-width:400px;
-display:flex;
-padding-bottom:10% ;
 
+
+display:flex;
+justify-content:center;
+padding:0px;
+max-width:400px;
 `
 export const Title = styled.h1 `
-    font-family: Museo Sans Rounded\ 500,Helvetica,Arial,Sans-Serif;
+
+font-family: Museo Sans Rounded\ 500,Helvetica,Arial,Sans-Serif;
 font-size:42px;
 letter-spacing:1.4px;
 text-transform:uppercase;
 font-weight:100;
+line-height:60px;
 /* margin-bottom:16px; */
 text-align:left;
-z-index:1;
-@media screen and (max-width:767px){
-  
-    font-size:24px;
+
+
+@media screen and (max-width:768px){
+    font-weight:530;
+    font-size:28px;
     text-align:center;
+    letter-spacing:-2px;
+    max-width:400px;
+    line-height:40px;
+    
   
   }
+  
+@media screen and (min-width:768px) and (max-width:950px){
+    font-size:35px;
+letter-spacing:1px;
+text-transform:uppercase;
+font-weight:100;
+line-height:40px;
+}
+
 `
 export const ParaText = styled.div `
-max-width:580px;
+max-width:550px;
 /* padding:10px 0px; */
 padding-left:20px;
 display:flex;
-align-items:center;
+align-items:flex-end;
     /* border:solid 1px ; */
 
 @media screen and (max-width:768px){
   
-    height:900px;
-    max-width:540px;
+    max-width:550px;
 
 } 
+@media screen and (min-width:768px) and (max-width: 920){
+  
+  max-width:540px;
 
+} 
 `
-
 export const Para = styled.p`
 font-family: Museo Sans Rounded\ 500,Helvetica,Arial,Sans-Serif;
 font-size:14px;
 letter-spacing:1px;
 font-weight:10;
 /* margin-bottom:16px; */
-line-height:40px;
+line-height:35px;
 text-align:start;
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
   
- 
+    font-size:14px;
+  text-align:center;
+  letter-spacing:1px;
+  line-height:25px;
   text-align:center;
 
+}
+@media screen and (min-width:768px) and (max-width:950px){
+    font-size:13px;
+    line-height:25px;
+text-align:center;
+letter-spacing:1px;
 }
 `
 //Picture-Section
