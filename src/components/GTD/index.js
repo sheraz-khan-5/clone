@@ -1,8 +1,7 @@
 //Ground Truth Data Section Style
-import React from 'react'
+import React,{useRef,useEffect,useState} from 'react'
 import Arrow from '../../images/arrow.png'
-import Post from '../../images/post.jpg'
-import Pre from '../../images/pre.jpg'
+
 import {
     GTDContainer,
     GTDWrapper,
@@ -13,15 +12,15 @@ import {
     ParaText,
     Title,
     Para,
-    BgCircle,
-    GTDRow2,
-    PictureContainer,
-    Picture1,
-    Picture2,
-    SliderBarContainer,
-    SlideBar,
-    SliderArrowContainer,
-    ArrowImage,
+    CompareImageSection,
+    ImageWrapper,
+    Images,
+    Image1,
+    Image2,
+    SliderBar,
+    SliderInput,
+    DragLine,
+    Arrow1,
     BtnWrapper,
     BtnRoute
 
@@ -30,6 +29,21 @@ import {
 } from './GTD-Elements'
 
 const GTDSection = () => {
+    // const slider = useRef();
+    // const dragPosition = useRef(null);
+    // const imageWidth = useRef(null);
+    //    const slider1 = slider.current.value
+    //    const img = imageWidth.current.styel.width;
+    //    const dragLine = dragPosition.current.style.left;
+
+    //   slider1.oninput = ()=>{
+    //     let sliderVal = slider.value;
+    //     dragLine = sliderVal + "%";
+    //     img = sliderVal + "%";
+    //   }
+    
+
+
     return (
         <>
         <GTDContainer id={'ground-truth-data'}>
@@ -46,24 +60,26 @@ const GTDSection = () => {
                 </ParaText>
                 </RightColumn>
             </GTDRow1>
-            {/* <GTDRow2>
-           <PictureContainer>
-            <Picture1 src={Pre}/>
-            <Picture2 src={Post} />
-            <SliderBarContainer>
-                <SlideBar>
-                </SlideBar>
-                <SliderArrowContainer>
-                    <ArrowImage src={Arrow} />
-                </SliderArrowContainer>
-            </SliderBarContainer>
-           </PictureContainer>
-               <BtnWrapper>
-                      <BtnRoute to='/signup'>Try It</BtnRoute>
-                </BtnWrapper> 
-            </GTDRow2> */}
-
         </GTDWrapper>
+           {/* <CompareImageSection>
+           <ImageWrapper>
+               <Images>
+            <Image1 />
+            <Image2 ref={imageWidth}  />
+            <SliderBar>
+            <DragLine ref={dragPosition}>
+                <Arrow1 src={Arrow}></Arrow1>
+           </DragLine>
+              <SliderInput ref={slider} type="range" min="0" max="100" value="50"/>
+            </SliderBar>
+           </Images>
+           </ImageWrapper>
+                     <BtnWrapper>
+                      <BtnRoute to='/signup'>Try It</BtnRoute>
+                     </BtnWrapper> 
+           </CompareImageSection>
+                */}
+        
         
         </GTDContainer>
               
