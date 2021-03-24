@@ -7,7 +7,7 @@ flex-direction:column;
 align-items:center;
 background:rgba(10,81,105,.05) 0 0 no-repeat padding-box;
 border:solid 1px;
-max-width:100%;
+
 `
 
 export const HIWH1 = styled.h1`
@@ -33,57 +33,28 @@ grid-template-columns: 1fr 1fr 1fr;
 align-items:center;
 margin-left:50px;
 margin-right:50px;
-<<<<<<< HEAD
-=======
-/* grid-gap:16px; */
->>>>>>> 74569ebe01fc38601521650bc55eb74aea48a300
+
 
 
 @media screen and (max-width:768px){
     grid-template-columns:1fr;
-<<<<<<< HEAD
 
-    grid-gap:50px;
-    margin-left:0px;
-    margin-right:0px;
-=======
-    /* padding:0 20px; */
-    grid-gap:50px;
-    margin-left:0px;
-margin-right:0px;
->>>>>>> 74569ebe01fc38601521650bc55eb74aea48a300
 }
 `
 export const HIWCards = styled.div `
 display:flex;
-<<<<<<< HEAD
-=======
-/* flex-direction:flex-start; */
->>>>>>> 74569ebe01fc38601521650bc55eb74aea48a300
+
 align-items:center;
 justify-content:center;
 padding:20px;
 
 @media screen and (max-width:768px){
     flex-direction:column;
-<<<<<<< HEAD
-    padding:0px;   
-}
- 
-=======
-    /* max-height:800px; */
-    padding:0px;
-    
-}
-   /* @media screen and (min-width:768px) and (max-width:920px){
-        font-size: 32px;
-} */
->>>>>>> 74569ebe01fc38601521650bc55eb74aea48a300
+
 
 `
 export const HIWH2 = styled.h1`
-    background-image:url(${FilledCircle});
-      background-repeat: no-repeat;
+
     text-align: left;
     background-position: bottom;
     font-weight: 700;
