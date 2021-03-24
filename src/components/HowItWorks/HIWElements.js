@@ -33,27 +33,52 @@ grid-template-columns: 1fr 1fr 1fr;
 align-items:center;
 margin-left:50px;
 margin-right:50px;
+<<<<<<< HEAD
+=======
+/* grid-gap:16px; */
+>>>>>>> 74569ebe01fc38601521650bc55eb74aea48a300
 
 
 @media screen and (max-width:768px){
     grid-template-columns:1fr;
+<<<<<<< HEAD
 
     grid-gap:50px;
     margin-left:0px;
     margin-right:0px;
+=======
+    /* padding:0 20px; */
+    grid-gap:50px;
+    margin-left:0px;
+margin-right:0px;
+>>>>>>> 74569ebe01fc38601521650bc55eb74aea48a300
 }
 `
 export const HIWCards = styled.div `
 display:flex;
+<<<<<<< HEAD
+=======
+/* flex-direction:flex-start; */
+>>>>>>> 74569ebe01fc38601521650bc55eb74aea48a300
 align-items:center;
 justify-content:center;
 padding:20px;
 
 @media screen and (max-width:768px){
     flex-direction:column;
+<<<<<<< HEAD
     padding:0px;   
 }
  
+=======
+    /* max-height:800px; */
+    padding:0px;
+    
+}
+   /* @media screen and (min-width:768px) and (max-width:920px){
+        font-size: 32px;
+} */
+>>>>>>> 74569ebe01fc38601521650bc55eb74aea48a300
 
 `
 export const HIWH2 = styled.h1`
