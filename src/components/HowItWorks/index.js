@@ -5,7 +5,9 @@ const HowItWorks = () => {
     return (
         <>
           <HIWContainer id="how-it-works">
+        
               <HIWH1>How It Works</HIWH1>
+             
               <HIWWapper>
                   <HIWCards>
                       <HIWH2>1</HIWH2>
