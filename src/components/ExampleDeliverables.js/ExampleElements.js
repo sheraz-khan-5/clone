@@ -1,7 +1,7 @@
 import img from '../../images/thumbnail.jpg'
 import BGCircle from '../../images/BackgroundCircle.png'
 import styled from 'styled-components'
-export const DeliverSection = styled.div`
+export const DeliverSection = styled.div `
     width:100%;
     display:flex;
     flex-direction:column;
@@ -13,7 +13,7 @@ export const DeliverSection = styled.div`
     padding: 15px 0px;
     border:1px solid;
 `
-export const EDContainer = styled.div`
+export const EDContainer = styled.div `
     display:flex;
     width:100%;
     flex-direction:column;
@@ -22,16 +22,16 @@ export const EDContainer = styled.div`
     color: rgb(10, 81, 105);
     padding:20px 10px;
 `
-export const H2Text = styled.h2`
+export const H2Text = styled.h2 `
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     background-size: 200px 200px;
     background-repeat: no-repeat;
     background-position-x:center;
     background-position-y:center;
     background-image:url(${BGCircle});
-    font-size: 34px;
-    font-weight: 400;
+    font-size: 42px;
     line-height: 6;
-    color: #212529;
+    color: #000;
     text-align: center;
     padding:20px 10px;
     @media screen and (min-width:768px) and (max-width:920px){
@@ -41,27 +41,26 @@ export const H2Text = styled.h2`
     font-size: 32px;
 }
 @media screen and (min-width:201px) and (max-width:401px){
-    font-weight: 600;
-    font-size: 14px;
+    font-size: 24px;
     background-size: 120px 120px;
 }
 `
-export const H3Text = styled.h3`
+export const H3Text = styled.h3 `
     padding: 10px;
-    color: #212529;
+    color: #000;
     font-size: 30px;
     font-weight:10;
     letter-spacing:0.1rem;
 `
-export const LoadSection = styled.div`
+export const LoadSection = styled.div `
     display:flex;
     justify-content:center;
     padding:20px 10px;
     width:100%;
 `
-export const LoadWrapper=styled.div`
-    height:480px;  
-    width:90%;
+export const LoadWrapper = styled.div `
+    /* height:480px;   */
+    width:80%;
     margin:0 auto;
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -70,22 +69,26 @@ export const LoadWrapper=styled.div`
 
 @media screen and (max-width:768px){
     grid-template-columns:1fr;
-    height:1000px; 
+    width:90%;
     padding:0 20px;
     grid-gap:20px;
 }
 `
-export const LoadingContent = styled.div`
+export const LoadingContent = styled.div `
     background-image:url(${img});
+    height:460px;
+    @media screen and (max-width:768px){
+        height:500px;     
+    }
 `
-export const LoadingTitle=styled.h4`
+export const LoadingTitle = styled.h4 `
     font-size:24px;
     color:#fff;
     text-align:center;
     text-shadow: 0 0 40px rgb(0 0 0 / 20%);
     padding:20px;
 `
-export const Fade= styled.div`
+export const Fade = styled.div `
     width: 100%;
     height: 100%;
     display:flex;
@@ -94,18 +97,19 @@ export const Fade= styled.div`
     transition: opacity .5s;
     background-color: rgba(0,0,0,.6);
 `
-export const PlayIcon = styled.i`
-    font-size:48px ;
+export const PlayIcon = styled.i `
     color:#fff;
     padding:50px 0;
+    cursor: pointer;
+  
 `
-export const LabelCon = styled.div`
+export const LabelCon = styled.div `
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
 `
-export const LoadLabel = styled.p`
+export const LoadLabel = styled.p `
     padding-top:50px;
     font-size: 10px;
     line-height:5px;
@@ -116,12 +120,12 @@ export const LoadLabel = styled.p`
     text-transform: uppercase;
     text-shadow: 0 0 40px rgb(0 0 0 / 20%);
 `
-    export const LogoImage = styled.img`
+export const LogoImage = styled.img `
     width: 150px;
     height: 50px;
     `
-    //MPartial Image Slider Section
-    
+//MPartial Image Slider Section
+
 //     export const MPSliderSection=styled.div`
 //     display:flex;
 // max-width:90%;
@@ -133,7 +137,7 @@ export const LoadLabel = styled.p`
 // padding:20px 10px;
 //     `
 //     export const H4Text = styled.h4`
-    
+
 //     `
 //     export const ImageSliderCon =styled.div`
 //     display:grid;
@@ -143,13 +147,13 @@ export const LoadLabel = styled.p`
 //     align-items:center;
 //     /* grid-gap:300px; */
 //     border: 1px solid #000;
-    
+
 //     `
 //     export const PrevArea = styled.div`
 //     /* width:50px;
 //     height:420px;
 //     border: 1px solid #000; */
-    
+
 //     `
 //       export const ImageArea = styled.div`
 //        display:flex;
@@ -164,31 +168,32 @@ export const LoadLabel = styled.p`
 
 
 //     `
-  
+
 //     export const NextArea = styled.div`
-    
+
 //     `
 //     export const AliceCarousel = styled.div`
 //      /* display:flex;
 //       justify-content:center; */
 //       /* width: 800px;; */
-     
+
 //     `
 
 //True Plan Section
 
-         export const TruePlanContainer = styled.div`
+export const TruePlanContainer = styled.div `
              max-width:100%;
              margin: 40px 0;
              display:flex;
              flex-direction:column;
 `
-        export const H3Title = styled.h3`
-            color: #000!important;
-            border:solid 1px;
+export const H3Title = styled.p `
+            color: #000;
             text-align:center;
+            padding:20px 0px;
+            font-size:48px;
         `
-        export const SketchContainer = styled.div`
+export const SketchContainer = styled.div `
             width:100%;
             display:flex;
             justify-content:center;
@@ -199,7 +204,7 @@ export const LoadLabel = styled.p`
            
 }  
         `
-        export const SketchImg = styled.img`
+export const SketchImg = styled.img `
             width: 40%;
             background: #fff;
             border-radius: 20px;

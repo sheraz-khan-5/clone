@@ -120,12 +120,13 @@ export const ParaText = styled.div `
     align-items:flex-end;
 `
 export const Para = styled.p`
-    font-family: Museo Sans Rounded\ 500,Helvetica,Arial,Sans-Serif;
+  
     font-size:14px;
     letter-spacing:1px;
     font-weight:10;
     line-height:35px;
     text-align:start;
+    color:#333333;
 @media screen and (max-width:768px) {
   
   font-size:14px;

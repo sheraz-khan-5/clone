@@ -22,8 +22,8 @@ const Home = () => {
                  <HeroSection />
                  <GTDSection />
                  <HowItWorks /> 
-                 <FeeStructure />
-                 <ExampleDeliverables />
+                 <FeeStructure  isOpen={isOpen} toggle={toggle} />
+                 <ExampleDeliverables isOpen={isOpen} toggle={toggle}/>
                  <ContactUs />
                  <Footer />
            
