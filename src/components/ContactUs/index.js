@@ -16,41 +16,53 @@ import {
 
 const ContactUs = () => {
     const [verify, setVerify] = useState(false)
-    const [input, setInput] = useState({
-        yourName:"",
+     const [isActive,setActive]= useState(false)
+    const [inputValue, setInput] = useState({
+        yName:"",
         email:"",
         cell:"",
         textArea:""
-
     })
-    console.log(input.length);
-    const handleName =(e)=>{
-        setInput({
-            yourName:e.target.value,        
+    const handleInputs =(e)=>{
+        const value=e.target.value;
+        const name=e.target.name;
+        setInput((prevs)=>{
+            if(name==="yName"){
+              return{  yName:value,
+                email:prevs.email,
+                cell:prevs.cell,
+                text:prevs.textArea
+            }
+            }else  if(name==="email"){
+                return{  yName:prevs.yName,
+                  email:value,
+                  cell:prevs.cell,
+                  text:prevs.textArea
+              }
+              }
+              else  if(name==="cell"){
+                return{ yName:prevs.yName,
+                email:prevs.value,
+                cell:value,
+                text:prevs.textArea,
+
+                
+              }}else{
+                return{ yName:prevs.yName,
+                  email:prevs.email,
+                  cell:prevs.cell,
+                  text:value
+              }
+              }
         })
     }
-    const handleEmail =(e)=>{
-        setInput({
-            email:e.target.value,
-        })
-    }
-    const handleCell =(e)=>{
-        setInput({
-            cell:e.target.value,
-        })
-    }
-    const handleTextArea =(e)=>{
-        setInput({
-            textArea:e.target.value,
-        })
-    }
-  
+  console.log(isActive)
     const recaptchaLoaded=()=> {
         console.log('capcha successfully loaded');
       }
       const verifyCallback = (response)=>{
         if(response){
-             setVerify({verify:true })
+             setVerify(true)
         
              }}
     const handleSubmit = ()=>{
@@ -63,16 +75,29 @@ const ContactUs = () => {
           <FormSection onSubmit={handleSubmit}>
               <FormContainer>
               <FormWrapper>
-                  <LabelText  for="fullname">Your Name</LabelText>
-                  <InputArea type="text"  value={input.yourName} onChange={handleName} required/>
+                  
+                  <InputArea type="text" 
+                //    value={inputValue.yName} 
+                   name="name"
+                   onChange={handleInputs}
+                    required isActive={isActive} />
+                  <LabelText   >Name </LabelText>
+                  
+                  <InputArea type="email" name="email"onChange={handleInputs} required />
                   <LabelText >Email</LabelText>
-                  <InputArea type="text"  value={input.email} onChange={handleEmail} required />
+                 
+                  <InputArea value={inputValue.cell} type="tel"
+                    name="cell"
+                     onChange={handleInputs} 
+                     required
+                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                     step="any"/>
                   <LabelText >Cell</LabelText>
-                  <InputArea type="text"  value={input.cell} onChange={handleCell} required/>
               </FormWrapper>
               <FormWrapper>
               
-              <TextArea type="text"  value={input.textArea} onChange={handleTextArea} required>Some text...</TextArea>
+              <TextArea type="text"   name="textArea" onChange={handleInputs} required/>
+              <LabelText >Write Something else..</LabelText>
               </FormWrapper>
           </FormContainer> 
           <MyCaptcha><Recaptcha

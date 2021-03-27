@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled,{css} from 'styled-components'
 import BGCircle from '../../images/BackgroundCircle.png'
 
 export const  ContactUsSection = styled.div`
@@ -10,12 +10,13 @@ export const  ContactUsSection = styled.div`
     padding: 0px;
 `
 export const H2Text = styled.h2`
+font-family: 'M PLUS Rounded 1c', sans-serif;
  background-size: 200px 200px;
     background-repeat: no-repeat;
     background-position-x:center;
     background-position-y:center;
     background-image:url(${BGCircle});
-    font-size: 34px;
+    font-size: 45px;
     font-weight: 400;
     line-height: 6;
     color: #212529;
@@ -29,7 +30,6 @@ export const H2Text = styled.h2`
     }
 `
 export const FormSection = styled.form`
-border:1px solid;
 padding:0px 100px;
 @media screen and (max-width:768px){
     padding:0px 10px;
@@ -39,7 +39,7 @@ export const FormContainer = styled.div`
     display:grid;
     grid-template-columns:1fr 1fr;
     margin:0 auto;
-    border:1px solid;
+    /* border:1px solid; */
     
 @media screen and (max-width:768px){
     grid-template-columns:1fr;
@@ -51,40 +51,79 @@ export const FormWrapper = styled.div`
 padding:0px 10px;
 display:flex;
 flex-direction:column;
+
+align-items:flex-start;
+
 flex: 0 0 50%;
 padding-top:20px;
-border:1px solid;
+/* border:1px solid; */
 `
 export const LabelText = styled.label`
-  color: rgb(0, 0, 32);
-  font-weight: bold;
-  text-align:left;
-  margin-bottom:-30px;
-  z-index:1;
-  margin-left:5px;
+  display: block;
+  pointer-events: none;
+  line-height: 1em;
+  margin-top: calc(-3em - 2px);
+  margin-bottom: calc((4em - 1em) + 20px);
+  font-weight: 600;
+  color: rgba(73,80,87,.8)!important;
+  
+&:before {
+  content: "";
+  display: inline-block;
+  margin: 0 calc(0.5em + 0px);
+  padding: 0 2px;
+  white-space: nowrap;
+  transition: 0.3s ease-in-out;
+  background-image: linear-gradient(to bottom, #fff, #fff);
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  ${(isActive)=>isActive&& 
+  css`
+  color:white;
+  `
+  }
+}
+
+
+
 `
   export const InputArea = styled.input`
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.137);
-  margin-bottom: 60px;
-  border: 1px solid rgba(10,81,105,.5);
-  background: #fff;
-  font-size: 16px;
-  color: rgb(0, 0, 32);
-  outline: none;
-    `
+    font-family: 'Raleway',sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(3em + 10px);
+    margin: 0 0 1em;
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 1px solid rgba(10,81,105,.5);
+    background: #fff;
+    resize: none;
+    outline: none;
+    &:focus + ${LabelText}
+    {
+    transition-duration: .3s;
+    transform:translate(0, -1.3em) scale(0.9, 0.9)
+  }
+  &:active + ${LabelText}
+    {
+    transition-duration: .3s;
+    color:white;
+  }
+     `
     export const TextArea = styled.textarea`
-    height:250px;
+    height: 240px;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid rgba(10,81,105,.5);
     border-radius: 10px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.137);
-  padding: 12px 15px;
-  border: 1px solid rgba(10,81,105,.5);
-    border-radius: 10px;
-     background: #fff;
-     font-size: 14px;
-    color: rgb(0, 0, 32);
-    margin-top:-10px;
+    padding: 12px 15px;
+    outline:none;
+    &:focus + ${LabelText}{
+    transition-duration: .3s;
+    transform: translate(0, -1.3em) scale(0.9, 0.9);
+  
+     }
 
 
     `
@@ -92,23 +131,31 @@ export const LabelText = styled.label`
     export const SubmitButton = styled.button`
     width: 159px;
     height: 40px;
-    border-radius:10px;
+    border-radius:20px;
     text-align: center;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0;
     color: #fff;
-    :disabled{ 
-        border-color: #a6a6a6!important;
-    background: #a6a6a6!important;
-    cursor: not-allowed;
-    
-       }
-       &:enabled{ 
-       
+    box-sizing: border-box;
+    background: #3ac280 0 0 no-repeat padding-box;
+    border-color: #3ac280;
     background: #3ac280!important;
     cursor: pointer;
+    &:hover{
+        color:#000;
+    }
+    &:disabled{ 
+      
+    background: #a6a6a6;
+    cursor: not-allowed;
+    border-color: #a6a6a6!important;
+    background: #a6a6a6!important;
+   
        }
+       /* &:enabled{ 
+     
+       } */
     `
     export const MyCaptcha= styled.div`
     display:flex;

@@ -11,6 +11,7 @@ background:rgba(10,81,105,.05) 0 0 no-repeat padding-box;
 
 `
 export const HIWH1 = styled.h1`
+font-family: 'M PLUS Rounded 1c', sans-serif;
    background-size: 200px 200px;
     background-repeat: no-repeat;
     background-position-x:center;
