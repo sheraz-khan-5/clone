@@ -12,10 +12,12 @@ align-items:center;
 font-size:0.8rem;
 position:sticky;
 top:0;
-z-index:10;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-border-bottom:1px solid #fff;
+z-index:1000;
+box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+/* box-shadow:${({isOpen})=>(isOpen ? '0px 0px greyone':'50px 50px grey')}; */
+border-bottom: 1px solid hsla(0,0%,100%,.5);
 transition: all 0.7s ease 0s;
+/* z-index: 1000; */
 @media screen and (max-width:960px){
 transition:0.8s all ease;
 }
@@ -32,9 +34,7 @@ align-items:center;
 height:60px;
 z-index:1;
 width:100%;
-padding:0 24px;
-max-width:1100px;
-
+max-width:1150px;
 `
 export const NavLogo=styled(LinkR)`
 color:black;
@@ -44,10 +44,11 @@ cursor: pointer;
 position:sticky;
 top:0;
 font-size:1.5rem;
-margin-left:50px;
-font-weight:bold;
 text-decoration:none;
 transform:translate(-300% 0%);
+`
+export const LogoImage = styled.img`
+    max-width: 217px;
 `
 export const MobileBar=styled.div`
 display:none;
@@ -60,13 +61,12 @@ display:none;
     top:0;
     font-size:1.25rem;
     cursor: pointer;
-    transform:translate(-300%,90%);
-
-    
+    transform:translate(-300%,90%);   
 }
 
 
 `
+
 export const NavMenu=styled.ul`
 display:flex;
 align-items:center;
@@ -86,15 +86,16 @@ height:60px;
 
 export const NavLinkS = styled(LinkS)`
 
-
-display:flex;
-align-items:center;
-padding:0 1rem;
-text-decoration:none;
-height:100%;
-cursor:pointer;
-font-weight: 100;
-letter-spacing: 1;
+    display:flex;
+    align-items:center;
+    padding:0 1rem;
+    text-decoration:none;
+    height:100%;
+    cursor:pointer;
+    font-weight: 100;
+    letter-spacing: 1; 
+    font-weight: 400;
+    font-size: 12px;
 
 
 &.active{
@@ -105,10 +106,10 @@ letter-spacing: 1;
 }
 `
 
-export const NavBtnLinkS =styled(LinkS)`
+export const NavBtnLinkS =styled(LinkR)`
 
-background: #3ac280 0 0 no-repeat padding-box;
-color:#fff;
+  background: #3ac280 0 0 no-repeat padding-box;
+    color:#fff;
     border-color: #3ac280;
     border-radius: 20px;
     height: 30px;
@@ -118,6 +119,8 @@ color:#fff;
     line-height: 16px;
     white-space: nowrap;
     min-width: 20px;
+    text-decoration: none;
     cursor:pointer;
+  
 
 `

@@ -70,9 +70,9 @@ const ContactUs = () => {
     }
     return (
         <>
-          <ContactUsSection>
-          <H2Text>Contact Us</H2Text>
-          <FormSection onSubmit={handleSubmit}>
+          <ContactUsSection >
+          <H2Text id={"contact-us"}>Contact Us</H2Text>
+          <FormSection onSubmit={handleSubmit} >
               <FormContainer>
               <FormWrapper>
                   

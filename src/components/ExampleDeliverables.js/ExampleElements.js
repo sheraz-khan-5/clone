@@ -1,4 +1,5 @@
-import img from '../../images/thumbnail.jpg'
+import imgR from '../../images/thumbnail.jpg'
+import imgL from '../../images/thumbnailL.jpg'
 import BGCircle from '../../images/BackgroundCircle.png'
 import styled from 'styled-components'
 export const DeliverSection = styled.div `
@@ -11,7 +12,6 @@ export const DeliverSection = styled.div `
     text-align: center;
     color: rgb(10, 81, 105);
     padding: 15px 0px;
-    border:1px solid;
 `
 export const EDContainer = styled.div `
     display:flex;
@@ -60,7 +60,7 @@ export const LoadSection = styled.div `
 `
 export const LoadWrapper = styled.div `
     /* height:480px;   */
-    width:80%;
+    width:82%;
     margin:0 auto;
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -74,12 +74,24 @@ export const LoadWrapper = styled.div `
     grid-gap:20px;
 }
 `
-export const LoadingContent = styled.div `
-    background-image:url(${img});
-    height:460px;
+export const LoadingContentR = styled.div `
+    background-image:url(${imgR});
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height:470px;
     @media screen and (max-width:768px){
         height:500px;     
     }
+`
+export const LoadingContentL = styled.div`
+   background-image:url(${imgL});
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height:470px;
+    @media screen and (max-width:768px){
+        height:500px;     
+    }
+
 `
 export const LoadingTitle = styled.h4 `
     font-size:24px;
@@ -95,7 +107,7 @@ export const Fade = styled.div `
     flex-direction:column;
     justify-content:center;   
     transition: opacity .5s;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.4);
 `
 export const PlayIcon = styled.i `
     color:#fff;

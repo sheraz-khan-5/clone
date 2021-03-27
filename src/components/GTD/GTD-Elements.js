@@ -13,11 +13,17 @@ margin-right: auto;
 margin-left: auto;
 background-color: #fff;
 padding:10px 100px;
+display:flex;
+justify-content:center;
+flex-direction:column;
+align-items:center;
 
 @media screen and (min-width:768px) and (max-width:1110px){
     padding:10px 50px;;
 }
-
+@media screen and (max-width:1230px){
+    display:none;
+}
 `
 export const GTDWrapper = styled.div`
     background-size: 200px 200px;
@@ -155,6 +161,8 @@ export const ImageWrapper = styled.div`
  box-shadow:0px 0px 15px reba(0,0,0,0,15);
  position: relative;
  width:90%;
+ margin-left:60px;
+
 `
 export const Image1 = styled.div`
 position:absolute;
@@ -230,7 +238,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 height: 40px;
-margin:20px;
+margin:30px;
 
 `
 export const BtnRoute = styled(LinkR)`

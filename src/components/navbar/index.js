@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react'
 import {FaBars} from 'react-icons/fa'
 import {IconContext} from 'react-icons/lib'
 import { animateScroll as scroll } from 'react-scroll'
+import logo from '../../images/logo.png'
 import {
         Nav,
         NavbarContainer,
         NavLogo,MobileBar,
         NavMenu,NavItem,
         NavLinkS,
-        NavBtnLinkS
+        NavBtnLinkS,
+        LogoImage,
+        NavLinkR
         } from './NavbarElements'
 
 function Navbar({toggle,isOpen}) {
@@ -31,7 +34,7 @@ function Navbar({toggle,isOpen}) {
     <Nav isOpen={isOpen} scrollNav={scrollNav} >
         <NavbarContainer  >
             <NavLogo to='/' onClick={toggleHome}>
-                logo
+                <LogoImage src={logo} />
             </NavLogo>
             <MobileBar   onClick={toggle} >
                 <FaBars />
@@ -76,13 +79,7 @@ function Navbar({toggle,isOpen}) {
                         >Example Deliverables</NavLinkS>
                     </NavItem>
                     <NavItem>
-                        <NavLinkS to='submission-portal'
-                        smooth={true}
-                        duration={1000}
-                        spy={true}
-                        exact='true'
-                        offset={-80}
-                        >Submission Portal</NavLinkS>
+                        <NavLinkS to='/signup'>Submission Portal</NavLinkS>
                     </NavItem>
                     <NavItem>
                         <NavLinkS to='contact-us'
@@ -94,11 +91,11 @@ function Navbar({toggle,isOpen}) {
                         >Contact Us</NavLinkS>
                     </NavItem>
                     <NavBtnLinkS to='/signin'
-                    smooth={true}
-                    duration={1000}
-                    spy={true}
-                    exact='true'
-                    offset={-80}
+                    // smooth={true}
+                    // duration={1000}
+                    // spy={true}
+                    // exact='true'
+                    // offset={-80}
                     >Sign In </NavBtnLinkS>
                 </NavMenu>
          

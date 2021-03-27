@@ -69,7 +69,7 @@ const FeeStructure = () => {
      const t=moveToolTip(amount.value1,amount.value3);
     return (
         <>
-            <FsContainer>
+            <FsContainer id="fee-structure">
                 <FSWrapper>
                     <H1Wrapper>
                         <FSH1> Waterfall Fee Structure</FSH1>

@@ -34,26 +34,14 @@ const GTDSection = () => {
      })
 
      const onhandle=(e)=>{
-         setSliderInput({
-             
+         setSliderInput({  
             sliderPosition:e.target.value,
             imageWidth:sliderInput.sliderPosition,
             dragLinePosition:sliderInput.sliderPosition
          })
      }
 
-    // const slider = useRef();
-    // const dragPosition = useRef(null);
-    // const imageWidth = useRef(null);
-    //    const slider1 = slider.current.value
-    //    const img = imageWidth.current.styel.width;
-    //    const dragLine = dragPosition.current.style.left;
-
-    //   slider1.oninput = ()=>{
-    //     let sliderVal = slider.value;
-    //     dragLine = sliderVal + "%";
-    //     img = sliderVal + "%";
-    //   }
+ 
     
 
 

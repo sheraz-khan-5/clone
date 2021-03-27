@@ -17,7 +17,8 @@ import {DeliverSection,
         H2Text,H3Text,
         LoadSection,
         LoadWrapper,
-        LoadingContent,
+        LoadingContentL,
+        LoadingContentR,
         LoadingTitle,
         PlayIcon,
         LoadLabel,
@@ -68,32 +69,32 @@ const ExampleDeliverables = () => {
     //   ];
     return (
         <>  
-        <DeliverSection>     
+        <DeliverSection id="example-deliverables" >     
             <EDContainer>
                 <H2Text>Example Deliverables</H2Text>
                 <H3Text>Pre-Mitigation Scan + Post-Mitigation Scan = ESX & SKX (TruePlan)</H3Text>
                 <LoadSection>
                     <LoadWrapper> 
-                        <LoadingContent>
+                        <LoadingContentR>
                             <Fade>
                                 <LoadingTitle >mpartial-Pre-Migration</LoadingTitle>
-                                <PlayIcon><AiFillPlayCircle size="100px"/></PlayIcon>
+                                <PlayIcon><AiFillPlayCircle size="70px"/></PlayIcon>
                                 <LabelCon>
                                     <LoadLabel>Powered By</LoadLabel>
                                     <LogoImage src={image}></LogoImage>
                                 </LabelCon>
                             </Fade>
-                        </LoadingContent>
-                        <LoadingContent>
+                        </LoadingContentR>
+                        <LoadingContentL >
                             <Fade>
                                 <LoadingTitle >mpartial-Post-Migration</LoadingTitle>
-                                <PlayIcon><AiFillPlayCircle size="100px"/></PlayIcon>
+                                <PlayIcon><AiFillPlayCircle size="70px"/></PlayIcon>
                                 <LabelCon>
                                     <LoadLabel>Powered By</LoadLabel>
                                     <LogoImage src={image}></LogoImage>
                                     </LabelCon>
                             </Fade>
-                        </LoadingContent>
+                        </LoadingContentL>
                     </LoadWrapper>
                 </LoadSection>   
             </EDContainer>
