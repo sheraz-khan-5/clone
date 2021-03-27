@@ -147,69 +147,68 @@ text-align:center;
 /*-------------------------Compare-Image-Section--------------------------------*/
 
 export const CompareImageSection = styled.div`
-display:flex;
-flex-direction:column;
+width:100%;
 `
 export const ImageWrapper = styled.div`
- height:500px;
- height: 631.25px;
+ height:550px;
  background:#fff;
  box-shadow:0px 0px 15px reba(0,0,0,0,15);
  position: relative;
+ width:90%;
 `
-export const Images = styled.div`
-height: 100%;
-width: 100%;
-display:flex;
-
-
-`
-export const Image1 = styled.img`
-height: 100%;
+export const Image1 = styled.div`
+position:absolute;
+height: 550px;
 width:100%;
-background:url(${Pre}) no-repeat
+
+background:url(${Pre}) no-repeat;
+
 `
-export const Image2 = styled.img`
+export const Image2 = styled.div`
 position: absolute;
   height: 100%;
-  width: 50%;
-background:url(${Post}) 
+  /* width: 50%; */
+background:url(${Post}) no-repeat;
+
 `
 export const SliderBar = styled.div`
 position:absolute;
 top:0;
 width:100%;
 cursor: ew-resize;
-z-index:1;
 
 `
 export const SliderInput = styled.input`
 width:100%;
 outline:none;
 background:none;
+border:none;
+cursor: ew-resize;
 -webkit-appearance:none;
 &::-webkit-slider-thumb{
     height: 486px;
   width: 3px;
   background: none;
   -webkit-appearance: none;
-  cursor: col-resize;
+  
 }
 `
 export const DragLine=styled.div`
-width: 3px;
-  height: 486px;
+  display:flex;
+  align-items:center;
+  width: 2px;
+  height: 550px;
   position: absolute;
-  left: 49.85%;
   pointer-events: none;
-  
+  outline:none;
   &::before,
 &::after{
   position: absolute;
   content: "";
   width: 100%;
-  height: 222px;
+  height: 500px;
   background: rgb(58, 194, 128);
+  
 }
 &::before{
   top: 0;
@@ -219,8 +218,6 @@ width: 3px;
 }
 `
 export const Arrow1 = styled.img`
-
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -231,20 +228,27 @@ export const Arrow1 = styled.img`
 export const BtnWrapper = styled.div`
 display:flex;
 justify-content:center;
+align-items:center;
+height: 40px;
+margin:20px;
 
 `
 export const BtnRoute = styled(LinkR)`
     background: #3ac280 0 0 no-repeat padding-box;
+    font-size:18px;
+    text-align:center;
     color:#fff;
     border-color: #3ac280;
     border-radius: 20px;
-    height: 30px;
-    padding: 7px 25px;
+    height: 40px;
+    width: 159px;
+    padding: 10px 25px;
     letter-spacing: 0;
-    font-size: 0.8rem;
-    line-height: 16px;
     white-space: nowrap;
-    min-width: 20px;
     cursor:pointer;
     text-decoration:none;
+
+    &:hover{
+      color:#000;
+    }
 `

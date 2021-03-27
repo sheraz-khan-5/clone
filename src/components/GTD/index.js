@@ -1,7 +1,6 @@
 //Ground Truth Data Section Style
-import React,{useRef,useEffect,useState} from 'react'
+import React,{useState} from 'react'
 import Arrow from '../../images/arrow.png'
-
 import {
     GTDContainer,
     GTDWrapper,
@@ -14,7 +13,6 @@ import {
     Para,
     CompareImageSection,
     ImageWrapper,
-    Images,
     Image1,
     Image2,
     SliderBar,
@@ -29,6 +27,21 @@ import {
 } from './GTD-Elements'
 
 const GTDSection = () => {
+     const [sliderInput, setSliderInput] = useState({
+         sliderPosition:'50',
+         imageWidth:44.5,
+         dragLinePosition:44.5
+     })
+
+     const onhandle=(e)=>{
+         setSliderInput({
+             
+            sliderPosition:e.target.value,
+            imageWidth:sliderInput.sliderPosition,
+            dragLinePosition:sliderInput.sliderPosition
+         })
+     }
+
     // const slider = useRef();
     // const dragPosition = useRef(null);
     // const imageWidth = useRef(null);
@@ -61,25 +74,26 @@ const GTDSection = () => {
                 </RightColumn>
             </GTDRow1>
         </GTDWrapper>
-           {/* <CompareImageSection>
+           <CompareImageSection>
            <ImageWrapper>
-               <Images>
+            {/* <Images> */}
             <Image1 />
-            <Image2 ref={imageWidth}  />
+            <Image2 style={{width:sliderInput.imageWidth+'%'}}/>
+            {/* </Images> */}
             <SliderBar>
-            <DragLine ref={dragPosition}>
+            <DragLine style={{left:sliderInput.dragLinePosition + '%'}}>
                 <Arrow1 src={Arrow}></Arrow1>
            </DragLine>
-              <SliderInput ref={slider} type="range" min="0" max="100" value="50"/>
+              <SliderInput onInput={onhandle} type="range" min="0" max="100" value={sliderInput.sliderPosition}/>
             </SliderBar>
-           </Images>
+          
            </ImageWrapper>
-                     <BtnWrapper>
-                      <BtnRoute to='/signup'>Try It</BtnRoute>
-                     </BtnWrapper> 
+                     
            </CompareImageSection>
-                */}
-        
+               
+           <BtnWrapper>
+                      <BtnRoute to='/signup'>Try Today</BtnRoute>
+                     </BtnWrapper> 
         
         </GTDContainer>
               
