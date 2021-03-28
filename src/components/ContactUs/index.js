@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import Recaptcha from 'react-recaptcha';
 import {
     ContactUsSection,
     FormSection,
@@ -57,14 +56,14 @@ const ContactUs = () => {
         })
     }
   console.log(isActive)
-    const recaptchaLoaded=()=> {
-        console.log('capcha successfully loaded');
-      }
-      const verifyCallback = (response)=>{
-        if(response){
-             setVerify(true)
+    // const recaptchaLoaded=()=> {
+    //     console.log('capcha successfully loaded');
+    //   }
+    //   const verifyCallback = (response)=>{
+    //     if(response){
+    //          setVerify(true)
         
-             }}
+    //          }}
     const handleSubmit = ()=>{
         alert `Your Form is submitted :)`
     }
@@ -100,13 +99,13 @@ const ContactUs = () => {
                <LabelText >Write your message </LabelText>
               </FormWrapper>
           </FormContainer> 
-          <MyCaptcha>
-            <Recaptcha
+          {/* <MyCaptcha> */}
+            {/* <Recaptcha
               sitekey="6LeJNIsaAAAAAPaNVand8I-GNxLdU1wGL16Sb8n-"
               render="explicit"
               onloadCallback={recaptchaLoaded}
               verifyCallback={verifyCallback}
-          /></MyCaptcha>
+          /></MyCaptcha> */}
           <SubmitButton type="submit"disabled={!verify}>Submit</SubmitButton>
           </FormSection>   
           </ContactUsSection>  
