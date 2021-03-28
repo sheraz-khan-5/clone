@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import Recaptcha from 'react-recaptcha';
 import {
     ContactUsSection,
     FormSection,
@@ -15,7 +16,7 @@ import {
 
 const ContactUs = () => {
     const [verify, setVerify] = useState(false)
-     const [isActive,setActive]= useState(false)
+
     const [inputValue, setInput] = useState({
         yName:"",
         email:"",
@@ -55,15 +56,15 @@ const ContactUs = () => {
               }
         })
     }
-  console.log(isActive)
-    // const recaptchaLoaded=()=> {
-    //     console.log('capcha successfully loaded');
-    //   }
-    //   const verifyCallback = (response)=>{
-    //     if(response){
-    //          setVerify(true)
+
+    const recaptchaLoaded=()=> {
+        console.log('capcha successfully loaded');
+      }
+      const verifyCallback = (response)=>{
+        if(response){
+             setVerify(true)
         
-    //          }}
+             }}
     const handleSubmit = ()=>{
         alert `Your Form is submitted :)`
     }
@@ -77,7 +78,7 @@ const ContactUs = () => {
                   <InputArea type="text" 
                     name="name"
                     onChange={handleInputs}
-                    required isActive={isActive}  />
+                    required   />
                   <LabelText   >Your Name</LabelText>
                   <InputArea type="email" name="email"onChange={handleInputs} required />
                   <LabelText >Email</LabelText>  
@@ -96,17 +97,19 @@ const ContactUs = () => {
                     name="textArea"
                     onChange={handleInputs}
                     required/>
-               <LabelText >Write your message </LabelText>
+              <LabelText >Write your message </LabelText>
               </FormWrapper>
           </FormContainer> 
-          {/* <MyCaptcha> */}
-            {/* <Recaptcha
+          <MyCaptcha>
+            <Recaptcha
               sitekey="6LeJNIsaAAAAAPaNVand8I-GNxLdU1wGL16Sb8n-"
               render="explicit"
               onloadCallback={recaptchaLoaded}
               verifyCallback={verifyCallback}
-          /></MyCaptcha> */}
-          <SubmitButton type="submit"disabled={!verify}>Submit</SubmitButton>
+          /></MyCaptcha>
+          <SubmitButton type="submit"
+                disabled={!verify}>
+                Submit</SubmitButton>
           </FormSection>   
           </ContactUsSection>  
         </>
