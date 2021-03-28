@@ -25,8 +25,8 @@ import {
 const GTDSection = () => {
      const [sliderInput, setSliderInput] = useState({
          sliderPosition:50,
-         imageWidth:44.5,
-         dragLinePosition:44.5
+         imageWidth:48.5,
+         dragLinePosition:48.5
      })
 
      const onhandle=(e)=>{

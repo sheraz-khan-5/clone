@@ -3,28 +3,28 @@ import {Link as LinkS} from 'react-scroll'
 import {Link as LinkR} from 'react-router-dom'
 
 export const SidebarContainer = styled.aside`
-position:fixed;
-z-index:999;
-width:100%;
-height:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-top:0;
-cursor: pointer;
-background-color:white;
-transition:all 0.7s ;
-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
-top:${({isOpen})=>(isOpen ? '9.6%':'-50%')};
+  position:fixed;
+  z-index:999;
+  width:100%;
+  height:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  top:0;
+  cursor: pointer;
+  background-color:white;
+  transition:all 0.7s ;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  top:${({isOpen})=>(isOpen ? '9.6%':'-50%')};
 @media screen and (min-width:1124px){
   display:none;
 }
 ` 
 export const SidebarWrapper = styled.div`
-color:#4a4848;
-font-size: 0.8rem;
-font-weight: 400px;
-opacity: 1;
+  color:#4a4848;
+  font-size: 0.8rem;
+  font-weight: 400px;
+  opacity: 1;
 `
 export const SidebarMenu = styled.ul`
   display:flex;
@@ -51,8 +51,9 @@ transition: 0.2s ease-in-out;
 }
 `
 export const SidebarBtnWrapper = styled.div`
-display:flex;
-justify-content:center;
+  display:flex;
+  justify-content:center;
+  padding-top:10px;
 
 `
 export const SidebarRoute = styled(LinkR)`

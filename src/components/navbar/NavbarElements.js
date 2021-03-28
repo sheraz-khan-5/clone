@@ -65,7 +65,6 @@ export const NavMenu=styled.ul`
     display:flex;
     align-items:center;
     list-style:none;
-    text-align:center;
     color:${({scrollNav})=>(scrollNav ? 'black': 'white')};
 @media screen and (max-width:1124px){
     display:none;
@@ -84,9 +83,9 @@ export const NavLinkS = styled(LinkS)`
     height:100%;
     cursor:pointer;
     font-weight: 100;
-    letter-spacing: 1; 
+    letter-spacing:0.3px; 
     font-weight: 400;
-    font-size: 12px;
+    font-size: 12\px;
 &.active{
     color:#3ac280; 
 }
@@ -94,7 +93,6 @@ export const NavLinkS = styled(LinkS)`
  color:#3ac280 ;
 }
 `
-
 export const NavBtnLinkS =styled(LinkR)`
 
   background: #3ac280 0 0 no-repeat padding-box;
@@ -110,6 +108,4 @@ export const NavBtnLinkS =styled(LinkR)`
     min-width: 20px;
     text-decoration: none;
     cursor:pointer;
-  
-
 `

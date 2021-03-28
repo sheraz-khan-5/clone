@@ -226,7 +226,7 @@ export const BtnWrapper = styled.div`
   justify-content:center;
   align-items:center;
   height: 40px;
-  margin:30px;
+  padding:100px 0 50px;
 `
 export const BtnRoute = styled(LinkR)`
     background: #3ac280 0 0 no-repeat padding-box;
