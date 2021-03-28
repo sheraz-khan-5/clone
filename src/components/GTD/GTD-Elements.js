@@ -7,17 +7,16 @@ import Post from '../../images/post.jpg'
 
 
 export const GTDContainer=styled.div`
-padding-right: 40px;
-padding-left: 40px;
-margin-right: auto;
-margin-left: auto;
-background-color: #fff;
-padding:10px 100px;
-display:flex;
-justify-content:center;
-flex-direction:column;
-align-items:center;
-
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+  padding:10px 100px;
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  align-items:center;
 @media screen and (min-width:768px) and (max-width:1110px){
     padding:10px 50px;;
 }
@@ -49,7 +48,6 @@ export const GTDWrapper = styled.div`
 export const GTDRow1 = styled.div `
     display:flex;
     justify-content:center;
-
 @media screen and (max-width:767px) {
     display:flex;
     flex-direction:column;
@@ -84,7 +82,6 @@ export const TitleText=styled.div `
     padding:10 50  0px;
 @media screen and (min-width:768px) and (max-width:950px){
     padding:0 10px;
-
 }
 
 `
@@ -142,59 +139,52 @@ export const Para = styled.p`
   text-align:center;
 }
 @media screen and (min-width:768px) and (max-width:920px){
-font-size:14px;
-text-align:center;
-letter-spacing:1px;
-line-height:23px;
-text-align:center;
-
+  font-size:14px;
+  text-align:center;
+  letter-spacing:1px;
+  line-height:23px;
+  text-align:center;
 }
 `
 /*-------------------------Compare-Image-Section--------------------------------*/
 
 export const CompareImageSection = styled.div`
-width:100%;
+  width:100%;
 `
 export const ImageWrapper = styled.div`
- height:550px;
- background:#fff;
- box-shadow:0px 0px 15px reba(0,0,0,0,15);
- position: relative;
- width:90%;
- margin-left:60px;
-
+  height:550px;
+  background:#fff;
+  box-shadow:0px 0px 15px reba(0,0,0,0,15);
+  position: relative;
+  width:90%;
+  margin-left:60px;
 `
 export const Image1 = styled.div`
-position:absolute;
-height: 550px;
-width:100%;
-
-background:url(${Pre}) no-repeat;
-
+  position:absolute;
+  height: 550px;
+  width:100%;
+  background:url(${Pre}) no-repeat;
 `
 export const Image2 = styled.div`
-position: absolute;
+  position: absolute;
   height: 100%;
-  /* width: 50%; */
-background:url(${Post}) no-repeat;
-
+  background:url(${Post}) no-repeat;
 `
 export const SliderBar = styled.div`
-position:absolute;
-top:0;
-width:100%;
+  position:absolute;
+  top:0;
+  width:100%;
 cursor: ew-resize;
-
 `
 export const SliderInput = styled.input`
-width:100%;
-outline:none;
-background:none;
-border:none;
-cursor: ew-resize;
+  width:100%;
+  outline:none;
+  background:none;
+  border:none;
+  cursor: ew-resize;
 -webkit-appearance:none;
 &::-webkit-slider-thumb{
-    height: 486px;
+  height: 486px;
   width: 3px;
   background: none;
   -webkit-appearance: none;
@@ -230,16 +220,13 @@ export const Arrow1 = styled.img`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-
 `
 export const BtnWrapper = styled.div`
-display:flex;
-justify-content:center;
-align-items:center;
-height: 40px;
-margin:30px;
-
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height: 40px;
+  margin:30px;
 `
 export const BtnRoute = styled(LinkR)`
     background: #3ac280 0 0 no-repeat padding-box;

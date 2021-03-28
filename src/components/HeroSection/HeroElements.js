@@ -7,10 +7,8 @@ justify-content:center;
 height:645px;
 align-items:center;
 position: relative;
-/* padding:0 30px; */
 z-index:1;
 overflow:hidden;
-/* margin-top:-60px; */
 :before{
   content:'';
   position:absolute;
@@ -56,7 +54,6 @@ text-align:center;
 position:relative;
 letter-spacing:2px;
 text-shadow: 0 3px 6px rgb(0 0 0 / 16%);
-/* border:solid 1px; */
 -webkit-font-smoothing: antialiased;
 `
 export const HeroScroll = styled.div`
@@ -76,7 +73,6 @@ cursor: pointer;
 @media screen and (max-width:760px){
    display:none;
  }
-
  `
 export const HeroLink = styled(LinkS)`
  width:20px;
@@ -87,22 +83,7 @@ export const HeroLink = styled(LinkS)`
  color:#131111;
  font-size:0.7rem;
  border-radius: 50px;
-
-   
-    /* ::after{
-    content:'';
-    width:1px;
-    height:5px;
-    border-radius:30%;
-    border:solid #000 1.5px;
-    margin-top:10px; 
-    background-color:#000; */
-   
-
-   
     :hover{
-    /* border:solid #3ac280 1.5px; */
-    /* background-color:#000; */
     color:#3ac280;
     margin-top:20px;
     transition: 0.4s ease-in-out;

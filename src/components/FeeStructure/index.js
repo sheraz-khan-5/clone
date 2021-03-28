@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import {
     FsContainer,
     FSWrapper,
@@ -21,12 +21,13 @@ import {
 const FeeStructure = () => {
     const [amount, setAmount] = useState(
        {
-        value1:'50000',
-        value2:750,
-        value3:5
+        total:50000,
+        fee:750,
+        positionToolTip:5
        });
     const [isPopUp , setPopUp] = useState(false);
-    function formatCurrency(num) {
+    
+    const formatCurrency =((num) => {
         if(num<1000){
            return "$"+ num
         }   
@@ -36,9 +37,8 @@ const FeeStructure = () => {
             else if(num >=1000000){
                 return "$" +Number((num/1000000).toFixed(0)) +"M"
             }   
-    }   
-    function formateFee(feeNum,aNum) {
-        // feeNum =7.50;
+    })   
+    const formateFee =((feeNum,aNum) => {
       if(aNum<=50000){
           return Number(feeNum/100).toFixed(2) + "%"  
       }  
@@ -48,16 +48,16 @@ const FeeStructure = () => {
          const percNum=((a*b)/100).toFixed(2);
         return Number(((feeNum/100)-percNum)).toFixed(2) + "%"   
       }      
-    }          
-    const handlePopUp = ()=>{ 
+    })          
+    const handleToolTip = ()=> { 
         setPopUp(!isPopUp)
     }
-   const handleChange=(e)=>{
+   const handleChange= (e) =>{
     setAmount(
     {
-        value1:e.target.value,
-        value2:amount.value2,
-        value3:amount.value3
+        total:e.target.value,
+        fee:amount.fee,
+        positionToolTip:amount.positionToolTip
     })
 
 }
@@ -66,7 +66,7 @@ const FeeStructure = () => {
         return tMove+(a*4.41)
      }
      
-     const t=moveToolTip(amount.value1,amount.value3);
+     const tPosition=moveToolTip(amount.total,amount.positionToolTip);
     return (
         <>
             <FsContainer id="fee-structure">
@@ -75,12 +75,12 @@ const FeeStructure = () => {
                         <FSH1> Waterfall Fee Structure</FSH1>
                     </H1Wrapper>
                     <RangeSliderWrapper>
-                    <SliderToolTip style={{left:t +'%'}} >
-                     {formatCurrency(amount.value1)}
+                    <SliderToolTip style={{left:tPosition +'%'}} >
+                     {formatCurrency(amount.total)}
                      <br/>
                      <p> Estimate Grand Total</p>
                      </SliderToolTip>
-                    <RangeSlider onInput={handleChange} type="range" min='0' max='1000000' value={amount.value1} step={50000} >     
+                    <RangeSlider onInput={handleChange} type="range" min='0' max='1000000' value={amount.total} step={50000} >     
                     </RangeSlider>
                   
                     </RangeSliderWrapper>
@@ -98,9 +98,9 @@ const FeeStructure = () => {
                             Move forward based on the estimated fee structure below.
                      </DescP>
                      <MPPartialFee>
-                         <FeePopUp  onClick={handlePopUp}>i</FeePopUp>
+                         <FeePopUp  onClick={handleToolTip}>i</FeePopUp>
                          <PopText isPopUp={isPopUp}>Fee Structure Example: An estimate grand total of $100k will result in a fee of $7,360. The $750 deposit will be collected upon submission and applied toward the overarching fee.</PopText>
-                         <FeeLabel >{formateFee(amount.value2, amount.value1)}</FeeLabel>
+                         <FeeLabel >{formateFee(amount.fee, amount.total)}</FeeLabel>
                          <FeeLabeeInfo>mpartial Fee</FeeLabeeInfo>
                      </MPPartialFee>
                      <InfoText >[$750 Minimum]</InfoText>

@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import BgCircle from '../../images/BackgroundCircle.png'
-
 export const FsContainer = styled.div `
     height:750px;
     width:100%;
@@ -27,7 +26,6 @@ export const H1Wrapper = styled.div `
     background-image:url(${BgCircle});
     background-position: 50%;
     padding: 12%;
-    
     @media screen and (max-width:768px){
     background-size: 180px 180px;
     }
@@ -40,8 +38,7 @@ export const FSH1 = styled.h1 `
     letter-spacing: 0;
     color: #222;
     opacity: 1;
-    text-align:center;
-    
+    text-align:center;   
     @media screen and (min-width:768px) and (max-width:920px){
     font-size: 38px;
 }
@@ -53,18 +50,15 @@ export const FSH1 = styled.h1 `
     font-weight: 600;
     font-size: 28px;
 }
-
 `
 export const RangeSliderWrapper = styled.div `
     width:100%;
     position:relative;
     justify-content:center;
     display:flex;
-
     @media screen and (max-width:768px){
     width:90%;
 }
-
 `
 export const RangeSlider = styled.input `
     background:rgba(10,81,105,.06) 0 0 padding-box;
@@ -92,7 +86,6 @@ export const RangeSlider = styled.input `
    
     }
 `
-
 export const SliderToolTip = styled.h5 `
     width: 170px;
     height: 80px;
@@ -110,7 +103,6 @@ export const SliderToolTip = styled.h5 `
     padding:10px;
     -webkit-transform: translate3d(-50%,0,0);
     transform: translate3d(-50%,0,0);   
-
     &::after{
     content: "";
     position: absolute;
@@ -120,8 +112,7 @@ export const SliderToolTip = styled.h5 `
     border-width: 10px;
     border-style: solid;
     border-color: #dff1eb transparent transparent transparent;
-  }
-  
+  } 
     @media screen and (max-width:768px){
     width: 140px;
     height: 70px;
@@ -143,7 +134,6 @@ export const LabelBarListItem = styled.li `
     color: rgb(132, 167, 179);
     font-size: 12px;
     font-weight: 600;
- 
  &::before {
      content:"|";
      display:flex;
@@ -222,9 +212,6 @@ export const PopText = styled.div `
     bottom: 100%;
     left: 20%;
     margin-bottom: 3px;
-
-  
-  
     &::after{
     content: "";
     position: absolute;

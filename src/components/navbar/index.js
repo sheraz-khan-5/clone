@@ -11,23 +11,25 @@ import {
         NavLinkS,
         NavBtnLinkS,
         LogoImage,
-        NavLinkR
         } from './NavbarElements'
 
 function Navbar({toggle,isOpen}) {
 
     const [scrollNav, setScrollNav] = useState(false)
+
     const changeNav =()=>{
         if(window.scrollY>=80){
-            setScrollNav(true)
+              setScrollNav(true)
         }else setScrollNav(false)
     }
+
     useEffect(()=>{
        window.addEventListener('scroll',changeNav)
     },[])
     const toggleHome=()=>{
         scroll.scrollToTop()
     }
+
     return (
     <>
     <IconContext.Provider value={{color:'#000'}}>
@@ -47,7 +49,6 @@ function Navbar({toggle,isOpen}) {
                         spy={true}
                         exact='true'
                         offset={-80}
-                        // activeClass='active'
                          > Ground-Truth Data</NavLinkS>
                     </NavItem>
                     <NavItem>
@@ -57,7 +58,6 @@ function Navbar({toggle,isOpen}) {
                         spy={true}
                         exact='true'
                         offset={-80}
-                        // activeClass='active'
                         >How It Works</NavLinkS>
                     </NavItem>
                     <NavItem>
@@ -91,14 +91,8 @@ function Navbar({toggle,isOpen}) {
                         >Contact Us</NavLinkS>
                     </NavItem>
                     <NavBtnLinkS to='/signin'
-                    // smooth={true}
-                    // duration={1000}
-                    // spy={true}
-                    // exact='true'
-                    // offset={-80}
                     >Sign In </NavBtnLinkS>
-                </NavMenu>
-         
+                </NavMenu>      
         </NavbarContainer>
     </Nav>
     </IconContext.Provider>

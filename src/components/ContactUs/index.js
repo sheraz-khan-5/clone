@@ -75,39 +75,39 @@ const ContactUs = () => {
           <FormSection onSubmit={handleSubmit} >
               <FormContainer>
               <FormWrapper>
-                  
                   <InputArea type="text" 
-                //    value={inputValue.yName} 
-                   name="name"
-                   onChange={handleInputs}
-                    required isActive={isActive} />
-                  <LabelText   >Name </LabelText>
-                  
+                    name="name"
+                    onChange={handleInputs}
+                    required isActive={isActive}  />
+                  <LabelText   >Your Name</LabelText>
                   <InputArea type="email" name="email"onChange={handleInputs} required />
-                  <LabelText >Email</LabelText>
-                 
+                  <LabelText >Email</LabelText>  
                   <InputArea value={inputValue.cell} type="tel"
                     name="cell"
                      onChange={handleInputs} 
                      required
                      pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                     step="any"/>
+                     step="any"
+                     min="0"
+                     max="9"/>
                   <LabelText >Cell</LabelText>
               </FormWrapper>
-              <FormWrapper>
-              
-              <TextArea type="text"   name="textArea" onChange={handleInputs} required/>
-              <LabelText >Write Something else..</LabelText>
+              <FormWrapper>  
+              <TextArea type="text"
+                    name="textArea"
+                    onChange={handleInputs}
+                    required/>
+               <LabelText >Write your message </LabelText>
               </FormWrapper>
           </FormContainer> 
-          <MyCaptcha><Recaptcha
-            sitekey="6LeJNIsaAAAAAPaNVand8I-GNxLdU1wGL16Sb8n-"
-            render="explicit"
-            onloadCallback={recaptchaLoaded}
-            verifyCallback={verifyCallback}
+          <MyCaptcha>
+            <Recaptcha
+              sitekey="6LeJNIsaAAAAAPaNVand8I-GNxLdU1wGL16Sb8n-"
+              render="explicit"
+              onloadCallback={recaptchaLoaded}
+              verifyCallback={verifyCallback}
           /></MyCaptcha>
-          <SubmitButton type="submit" disabled={!verify}>Submit</SubmitButton>
-          
+          <SubmitButton type="submit"disabled={!verify}>Submit</SubmitButton>
           </FormSection>   
           </ContactUsSection>  
         </>

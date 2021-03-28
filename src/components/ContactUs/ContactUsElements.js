@@ -1,7 +1,7 @@
-import styled,{css} from 'styled-components'
+import styled from 'styled-components'
 import BGCircle from '../../images/BackgroundCircle.png'
 
-export const  ContactUsSection = styled.div`
+export const ContactUsSection = styled.div `
     background-color: rgb(255, 255, 255);
     -webkit-box-pack: center;
     justify-content: center;
@@ -9,9 +9,9 @@ export const  ContactUsSection = styled.div`
     color: rgb(10, 81, 105);
     padding: 0px;
 `
-export const H2Text = styled.h2`
-font-family: 'M PLUS Rounded 1c', sans-serif;
- background-size: 200px 200px;
+export const H2Text = styled.h2 `
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-size: 200px 200px;
     background-repeat: no-repeat;
     background-position-x:center;
     background-position-y:center;
@@ -29,66 +29,54 @@ font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 32px;
     }
 `
-export const FormSection = styled.form`
-padding:0px 100px;
-@media screen and (max-width:768px){
+    export const FormSection = styled.form `
+    padding:0px 100px;
+    @media screen and (max-width:768px){
     padding:0px 10px;
     }
 `
-export const FormContainer = styled.div`
+    export const FormContainer = styled.div `
     display:grid;
     grid-template-columns:1fr 1fr;
     margin:0 auto;
-    /* border:1px solid; */
-    
-@media screen and (max-width:768px){
+    @media screen and (max-width:768px){
     grid-template-columns:1fr;
     padding:0 20px;
     grid-gap:0px;
 }
 `
-export const FormWrapper = styled.div`
-padding:0px 10px;
-display:flex;
-flex-direction:column;
-
-align-items:flex-start;
-
-flex: 0 0 50%;
-padding-top:20px;
-/* border:1px solid; */
+    export const FormWrapper = styled.div `
+    padding:0px 10px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    flex: 0 0 50%;
+    padding-top:20px;
 `
-export const LabelText = styled.label`
-  display: block;
-  pointer-events: none;
-  line-height: 1em;
-  margin-top: calc(-3em - 2px);
-  margin-bottom: calc((4em - 1em) + 20px);
-  font-weight: 600;
-  color: rgba(73,80,87,.8)!important;
+    export const LabelText = styled.label `
+    font-family:'Ralvey' sans-serif;
+    display: block;
+    pointer-events: none;
+    line-height: 1em;
+    margin-top: calc(-3em - 2px);
+    margin-bottom: calc((4em - 1em) + 20px);
+    font-weight: 600;
+    color: rgba(73,80,87,.8)!important;
   
 &:before {
-  content: "";
-  display: inline-block;
-  margin: 0 calc(0.5em + 0px);
-  padding: 0 2px;
-  white-space: nowrap;
-  transition: 0.3s ease-in-out;
-  background-image: linear-gradient(to bottom, #fff, #fff);
-  background-size: 100% 5px;
-  background-repeat: no-repeat;
-  background-position: center;
-  ${(isActive)=>isActive&& 
-  css`
-  color:white;
-  `
-  }
+    content: "";
+    display: inline-block;
+    margin: 0 calc(0.5em + 0px);
+    padding: 0 2px;
+    white-space: nowrap;
+    transition: 0.3s ease-in-out;
+    background-image: linear-gradient(to bottom, #fff, #fff);
+    background-size: 100% 5px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
-
-
 `
-  export const InputArea = styled.input`
+export const InputArea = styled.input `
     font-family: 'Raleway',sans-serif;
     box-sizing: border-box;
     width: 100%;
@@ -105,13 +93,8 @@ export const LabelText = styled.label`
     transition-duration: .3s;
     transform:translate(0, -1.3em) scale(0.9, 0.9)
   }
-  &:active + ${LabelText}
-    {
-    transition-duration: .3s;
-    color:white;
-  }
      `
-    export const TextArea = styled.textarea`
+export const TextArea = styled.textarea `
     height: 240px;
     font-size: 14px;
     width: 100%;
@@ -119,16 +102,13 @@ export const LabelText = styled.label`
     border-radius: 10px;
     padding: 12px 15px;
     outline:none;
-    &:focus + ${LabelText}{
+    resize: none;
+    &:focus + ${LabelText}{  
     transition-duration: .3s;
-    transform: translate(0, -1.3em) scale(0.9, 0.9);
-  
+    transform: translate(0, -1.3em) scale(0.9, 0.9); 
      }
-
-
     `
-    
-    export const SubmitButton = styled.button`
+export const SubmitButton = styled.button `
     width: 159px;
     height: 40px;
     border-radius:20px;
@@ -151,13 +131,8 @@ export const LabelText = styled.label`
     cursor: not-allowed;
     border-color: #a6a6a6!important;
     background: #a6a6a6!important;
-   
-       }
-       /* &:enabled{ 
-     
-       } */
-    `
-    export const MyCaptcha= styled.div`
+    }`
+export const MyCaptcha = styled.div `
     display:flex;
     justify-content:center;
     padding:20px;

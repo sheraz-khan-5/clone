@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-// import {Fatimes} from 'react-icons/fa'
 import {Link as LinkS} from 'react-scroll'
 import {Link as LinkR} from 'react-router-dom'
 
@@ -16,10 +15,7 @@ cursor: pointer;
 background-color:white;
 transition:all 0.7s ;
 box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
-/* 
-opacity:${({isOpen})=>(isOpen ? '100%':'0%')}; */
 top:${({isOpen})=>(isOpen ? '9.6%':'-50%')};
-/* z-index: ${({isOpen})=>(isOpen ? '':'1')}; */
 @media screen and (min-width:1124px){
   display:none;
 }
